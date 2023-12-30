@@ -3,32 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>whyUs</title>
+  <link rel="stylesheet" href="./CSS/whyUs.css">
 </head>
 <body>
-  <section id="why-us" class="why-us section-bg">
-    <div class="container-fluid aos-init aos-animate" data-aos="fade-up">
-      <div class="row">
-        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
-          <div class="content">
-            <h3>
-              "Eum ipsam laborum deleniti "
-              <strong>velit pariatur architecto aut nihil</strong>
-            </h3>
-            <p>" Lorem ipsum "</p>
-          </div>
-          <div class="accordion-list">
-            <ul>
-              <li>
-                
-              </li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
+  <section id="why-us">   <!-- 전체적인 padding을 주기 위한 section 설정 -->
+    <div class="left-section">
+      <div class="title">   <!-- 제목 부분 -->
+        <p id="title-1">Eum ipsam laborum deleniti</p>
+        <p id="title-2">velit pariatur architecto aut nihil</p>
+        <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit</p>
+      </div>   
+      <div class="accordion">   <!-- 질문&설명 부분 -->
+        <input type="radio" name="accordion" id="answer01">
+        <label for="answer01">
+          <em><img src="./img/arrowdown.png" style="width: 30px; height: 30px;" alt="화살표 밑쪽으로 향하기"></em>
+          <span>01</span>
+          Non consectetur a erat nam at lectus urna duis?
+        </label>
+        <div>
+          <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
         </div>
-        <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img aos-init aos-animate" style="background-image: url();" data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
-      </div>
+        <input type="radio" name="accordion" id="answer02">
+        <label for="answer02">
+          <em><img src="./img/arrowdown.png" style="width: 30px; height: 30px;" alt="화살표 밑쪽으로 향하기"></em>
+          <span>02</span>
+          Feugiat scelerisque varius morbi enim nunc?
+        </label>
+        <div>
+          <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+        </div>
+        <input type="radio" name="accordion" id="answer03">
+        <label for="answer03">
+          <em><img src="./img/arrowdown.png" style="width: 30px; height: 30px;" alt="화살표 밑쪽으로 향하기"></em>
+          <span>03</span>
+          Dolor sit amet consectetur adipiscing elit?
+        </label>
+        <div>
+          <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+        </div>
+      </div> 
+    </div>
+    <div class="right-section">
+      <img src="./img/whyUs.png" alt="이미지 설명">
     </div>
   </section>
 </body>
