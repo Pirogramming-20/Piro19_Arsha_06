@@ -1,3 +1,11 @@
+header{
+    z-index: 2;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
 /* header-top부분 시작=> "free download" 적혀있는 좁은 바 */
 
 #header-top{
@@ -46,6 +54,7 @@
 #header-top-right{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 #header-top-right > div{
     display: flex;
@@ -80,7 +89,7 @@
     background-color: #37517E;
 }
 #header-nav-container{
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,7 +116,7 @@
     transform: rotate(180deg);
     transition: color 0.175s ease-in;
 }
-#header-nav #nav li{
+#header-nav #nav > li{
     padding-left: 30px;
     transition: all 0.175s ease-in;
 }
@@ -118,19 +127,39 @@
     border-radius: 50px;
     background-color: #37517E;
 }
-#header-nav #nav li:hover{
+#header-nav #nav > li:hover{
     cursor: pointer;
     color: #47B2E4;
 }
-#header-nav #nav li:hover i{
+#header-nav #nav > li:hover i{
     color: #47B2E4;
 }
 #header-nav #nav #get-started:hover{
     color: white;
     background-color: #47B2E4;
 }
+.drop-down{
+    position: relative;
+    padding: 10px 0;
+}
 .drop-down ul{
-    background-color: aqua;
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: gray;
+    border-radius: 4px;
+}
+.drop-down:hover ul{
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    animation: fadeInUp 0.5s;
+    animation-fill-mode: forwards;
+}
+.drop-down li{
+    color: white;
+    padding: 20px 0;
+    
 }
 @keyframes fadeInUp {
     0% {
