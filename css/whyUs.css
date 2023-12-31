@@ -13,6 +13,7 @@
   padding: 20px; /* 내부 여백 */
   margin-top: 110px;
   box-sizing: border-box;
+  animation: slideUpAnimation 1s ease-out;
 }
 .whyUs-right-section {
   float: left;
@@ -97,4 +98,18 @@ input[id*="answer"]:checked + label em {
 #answer02:hover + label .question,
 #answer03:hover + label .question {
     color: #47b2e4;
+}
+
+.whyUs-animate-image {
+  animation: scaleAnimation 1s ease-in-out;
+}
+
+@keyframes scaleAnimation {
+  0% { transform: scale(0.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slideUpAnimation {
+  0% { transform: translateY(200px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
