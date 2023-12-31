@@ -1,25 +1,29 @@
-body {
-  padding: 60px 0;
-  overflow: hidden;
+.whyUs-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 70px;
   background-color: #f3f5fa;
 }
 /* 오른쪽 영역, 왼쪽 영역으로 분리 */
-.left-section {
+.whyUs-left-section {
   float: left;
   width: 50%;
   height: 100vh; /* 전체 화면 높이 */
   padding: 20px; /* 내부 여백 */
+  margin-top: 110px;
   box-sizing: border-box;
+  animation: slideUpAnimation 1s ease-out;
 }
-.right-section {
+.whyUs-right-section {
   float: left;
   width: 50%;
   height: 100vh;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
-  align-items: center; /* Vertically centers the content */
-  justify-content: center; /* Horizontally centers the content */
+  align-items: center; 
+  justify-content: center; 
 }
 
 #title-1 {
@@ -45,6 +49,8 @@ input[id*="answer"] {
 input[id*="answer"] + label {
   display: block;
   padding: 20px;
+  padding-top: 15px;
+  padding-bottom: 5;
   border: 1px solid #fff;
   border-bottom: 0;
   color: #343a40;
@@ -72,6 +78,7 @@ input[id*="answer"] + label + div {
 input[id*="answer"] + label + div p {
   display: inline-block;
   padding: 20px;
+  padding-top: 0px;
 }
 input[id*="answer"]:checked + label + div {
   max-height: 100px;
@@ -81,4 +88,28 @@ input[id*="answer"]:checked + label em {
 }
 .accordion label {
   margin-top: 30px;
+}
+
+.question:hover {
+    color: #47b2e4; 
+}
+
+#answer01:hover + label .question,
+#answer02:hover + label .question,
+#answer03:hover + label .question {
+    color: #47b2e4;
+}
+
+.whyUs-animate-image {
+  animation: scaleAnimation 1s ease-in-out;
+}
+
+@keyframes scaleAnimation {
+  0% { transform: scale(0.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slideUpAnimation {
+  0% { transform: translateY(200px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
