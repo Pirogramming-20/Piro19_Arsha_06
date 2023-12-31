@@ -1,17 +1,19 @@
 .whyUs-body {
-  padding: 60px 0;
-  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 70px;
   background-color: #f3f5fa;
 }
 /* 오른쪽 영역, 왼쪽 영역으로 분리 */
-.left-section {
+.whyUs-left-section {
   float: left;
   width: 50%;
   height: 100vh; /* 전체 화면 높이 */
   padding: 20px; /* 내부 여백 */
   box-sizing: border-box;
 }
-.right-section {
+.whyUs-right-section {
   float: left;
   width: 50%;
   height: 100vh;

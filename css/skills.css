@@ -1,11 +1,13 @@
 .skills-body {
-  padding: 60px 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 85px;
   overflow: hidden;
   background-color: white;
 }
 
 /* 오른쪽 영역, 왼쪽 영역으로 분리 */
-.left-section {
+.skills-left-section {
   float: left;
   width: 50%;
   height: 100vh;
@@ -15,12 +17,12 @@
   align-items: center;
   justify-content: center;
 }
-.right-section {
+.skills-right-section {
   float: left;
   width: 50%;
   height: 100vh;
   padding: 20px;
-  padding-left: 0;
+  padding-left: 0px;
   box-sizing: border-box;
   position: relative;
 }
