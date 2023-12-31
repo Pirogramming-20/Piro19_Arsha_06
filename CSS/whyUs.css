@@ -45,6 +45,8 @@ input[id*="answer"] {
 input[id*="answer"] + label {
   display: block;
   padding: 20px;
+  padding-top: 15px;
+  padding-bottom: 5;
   border: 1px solid #fff;
   border-bottom: 0;
   color: #343a40;
@@ -72,6 +74,7 @@ input[id*="answer"] + label + div {
 input[id*="answer"] + label + div p {
   display: inline-block;
   padding: 20px;
+  padding-top: 0px;
 }
 input[id*="answer"]:checked + label + div {
   max-height: 100px;
@@ -81,4 +84,14 @@ input[id*="answer"]:checked + label em {
 }
 .accordion label {
   margin-top: 30px;
+}
+
+.question:hover {
+    color: #47b2e4; 
+}
+
+#answer01:hover + label .question,
+#answer02:hover + label .question,
+#answer03:hover + label .question {
+    color: #47b2e4; /* Specified color */
 }
