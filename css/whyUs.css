@@ -11,6 +11,7 @@
   width: 50%;
   height: 100vh; /* 전체 화면 높이 */
   padding: 20px; /* 내부 여백 */
+  margin-top: 110px;
   box-sizing: border-box;
 }
 .whyUs-right-section {
