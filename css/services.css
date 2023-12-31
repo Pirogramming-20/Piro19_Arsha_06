@@ -7,6 +7,19 @@
 body {
   background-color: #f3f5fa;
 }
+#services-title-event {
+  animation: fadeInUpAnimation 0.5s ease-out;
+}
+@keyframes fadeInUpAnimation {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
 .services-title > h2 {
   font-size: 32px;
   font-weight: bold;
@@ -51,6 +64,17 @@ body {
   background-color: white;
   padding: 50px 30px;
   transition: transform 0.3s ease;
+  animation: scaleUpAnimation 0.5s ease-out;
+}
+@keyframes scaleUpAnimation {
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
 }
 .service-name {
   margin-top: 10px;
