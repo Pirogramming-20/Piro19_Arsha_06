@@ -17,6 +17,21 @@
   align-items: center;
   justify-content: center;
 }
+.skills-left-section img {
+  animation: flyInAnimation 0.5s ease-out;
+}
+@keyframes flyInAnimation {
+  0% { 
+      transform: translate(-100%, 100%) scale(0.5);
+      opacity: 0;
+  }
+  100% { 
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+  }
+}
+
+
 .skills-right-section {
   float: left;
   width: 50%;
@@ -25,7 +40,19 @@
   padding-left: 0px;
   box-sizing: border-box;
   position: relative;
+  animation: flyInFromRight 0.5s ease-out;
 }
+@keyframes flyInFromRight {
+  0% { 
+      transform: translate(100%, 100%) scale(0.5);
+      opacity: 0;
+  }
+  100% { 
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+  }
+}
+
 #right-section-textbox {
   position: absolute;
   top: 50%;
