@@ -394,7 +394,7 @@ part3{
     width: min(100%,950px);
     align-items: center;
   }
-  .product{
+  .pfcheckbox:checked+.pfitem+.product{
     grid-template-columns: repeat(2,1fr);
   }
   .teamgrid{
@@ -405,8 +405,9 @@ part3{
       flex-direction: column;
       align-items: center;
     }
-    .product{
+    .pfcheckbox:checked+.pfitem+.product{
       grid-template-columns: repeat(1,1fr);
     }
+} 
 }
-}
+
