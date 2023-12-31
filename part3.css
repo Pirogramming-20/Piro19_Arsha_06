@@ -6,21 +6,7 @@
   --wide:calc(100vw - 15rem);
 }
 
-@keyframes slidein {
-	from {
-		margin-left: 100%;
-		width: 300%;
-	}
-	to {
-		margin-left: 0%;
-		width: 100%;
-	}
-}
 
-.aaa{
-  background-color: white;
-  height: 1500px;
-}
 part3{
   animation-name: slidein;
   animation-duration: 1000ms;
