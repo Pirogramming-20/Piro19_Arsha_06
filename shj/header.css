@@ -1,0 +1,175 @@
+header{
+    z-index: 2;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+/* header-top부분 시작=> "free download" 적혀있는 좁은 바 */
+
+#header-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #023B6D;
+    height: 32px;
+}
+#header-top i{
+    font-size: 22px;
+    color:aliceblue;
+}
+#header-top img{
+    margin-left: 10px;
+    height: 25px;
+}
+#logo{
+    display: flex;
+    gap: 20px;
+}
+#header-top-left{
+    display: flex;
+    gap: 10px;
+}
+
+#header-top-center{
+    display: flex;
+    align-items: center;
+}
+#header-top-center span{
+    color: white;
+    font-weight: bold;
+}
+#header-top-center i{
+    margin: 0px 13px;
+    font-size: 12px;
+}
+#header-top-center i:nth-of-type(1){
+    transform: rotate(-90deg);
+}
+#header-top-center i:nth-of-type(2){
+    transform: rotate(90deg);
+}
+
+#header-top-right{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#header-top-right > div{
+    display: flex;
+    align-items: center;
+    height: 32px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #00A6EB;
+}
+#header-top-right > i{
+    color: #9AB1C5;
+    transition: all 0.175s ease-in;
+}
+#header-top-right > i:hover{
+    color: white;
+}
+#header-top-right i{
+    margin: 0px 10px;
+}
+#header-top-right span{
+    margin-right: 15px;
+}
+/* header-top부분 종료 */
+
+
+
+/* header-nav부분 시작 =>  navigation bar부분*/
+#header-nav{
+    display: flex;
+    justify-content: center;
+    background-color: #37517E;
+}
+#header-nav-container{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin: 0 ;
+}
+#header-nav #site-name{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+    padding: 5.5px 0 5.5px 0;
+    margin-right: 250px;
+}
+#header-nav #nav{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.drop-down i{
+    margin-left: 5px;
+    color: #E3E6EA;
+    font-size: 12px;
+    transform: rotate(180deg);
+    transition: color 0.175s ease-in;
+}
+#header-nav #nav > li{
+    padding-left: 30px;
+    transition: all 0.175s ease-in;
+}
+#header-nav #nav #get-started{
+    padding: 8px 20px;
+    margin-left: 30px;
+    border: 2px solid #47B2E4;
+    border-radius: 50px;
+    background-color: #37517E;
+}
+#header-nav #nav > li:hover{
+    cursor: pointer;
+    color: #47B2E4;
+}
+#header-nav #nav > li:hover i{
+    color: #47B2E4;
+}
+#header-nav #nav #get-started:hover{
+    color: white;
+    background-color: #47B2E4;
+}
+.drop-down{
+    position: relative;
+    padding: 10px 0;
+}
+.drop-down ul{
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: gray;
+    border-radius: 4px;
+}
+.drop-down:hover ul{
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    animation: fadeInUp 0.5s;
+    animation-fill-mode: forwards;
+}
+.drop-down li{
+    color: white;
+    padding: 20px 0;
+    
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+/* header-nav부분 종료 =>  navigation bar부분*/

@@ -6,10 +6,6 @@
   --wide:calc(100vw - 15rem);
 }
 
-.aaa{
-  background-color: white;
-  height: 1500px;
-}
 part3{
   display: flex;
   flex-direction: column;
