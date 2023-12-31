@@ -3,11 +3,12 @@ section{
     padding: 60px 0;
 }
 
-.section-title4 h2{
+.section_title4 > h2{
+    
     position:relative;
 }
 
-.section-title4 h2::before {
+.section_title4 > h2::before {
     content: "";
     position: absolute;
     display: block;
@@ -17,8 +18,8 @@ section{
     bottom: 1px;
     left: calc(50% - 60px);
 }
-  
-.section-title4 h2::after {
+
+.section_title4 > h2::after {
     content: "";
     position: absolute;
     display: block;
@@ -92,17 +93,15 @@ price{
 
 .row4{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
-    box-sizing: border-box;
+    margin-bottom: 40px;
+    /* box-sizing: border-box; */
 }
 
-.pricing4 .row4 {
-    padding-top: 40px;
-}
 
 .pricing4 .box4 {
-    padding: 60px 40px;
+    padding: 25px 40px;
     box-shadow: 0 3px 20px -2px rgba(20, 45, 100, 0.1);
     background: #fff;
     height: 100%;
@@ -361,8 +360,8 @@ li a {
 }
 .whole4{
     display: flex;
+    gap : 20px;
 }
-
 .right4 .first-line4{
     display: flex;  
 
