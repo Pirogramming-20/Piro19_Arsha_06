@@ -51,7 +51,7 @@ part3{
 /* #########################Call To Action구현############################# */
 
 .callToAction{
-  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url(./image/apt.jpg) fixed center center;
+  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url(../image/apt.jpg) fixed center center;
   background-size : cover;
   padding: 120px 0;
   display: flex;
