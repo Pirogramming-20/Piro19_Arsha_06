@@ -184,20 +184,42 @@ part3{
 /* ##########클릭시 구현할것############# */
 
 .product{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap:var(--gap);
   padding-bottom: 3.5rem;
   width: var(--wide);
   animation: fadein 2s linear;
+  /* flex-wrap: wrap; */
 }
 .pic{
   width: 100%;
   padding-bottom: var(--gap);
 }
+.picback{
+  position: relative;
+  z-index: 3;
+}
+.piccontent{
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 26px;
+  z-index: 3;
+  right: 0;
+  transition: all 0.3s;
+  background: rgba(55, 81, 126, 0.8);
+  padding: 10px 15px;
+}
 .productline{
   display: flex;
   flex-direction: column;
 }
+.picback:hover > .piccontent{
+  opacity: 1;
+  z-index: 2;
+}
+
 
 
 /* #########################TEAM구현########################### */
@@ -358,6 +380,9 @@ part3{
     width: min(100%,950px);
     align-items: center;
   }
+  .product{
+    grid-template-columns: repeat(2,1fr);
+  }
   .teamgrid{
     grid-template-columns: repeat(1,1fr);
   } 
@@ -365,6 +390,9 @@ part3{
     .ctaCenter{
       flex-direction: column;
       align-items: center;
+    }
+    .product{
+      grid-template-columns: repeat(1,1fr);
     }
 }
 }
