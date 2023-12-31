@@ -21,8 +21,8 @@
   padding: 20px;
   box-sizing: border-box;
   display: flex;
-  align-items: center; /* Vertically centers the content */
-  justify-content: center; /* Horizontally centers the content */
+  align-items: center; 
+  justify-content: center; 
 }
 
 #title-1 {
@@ -96,5 +96,5 @@ input[id*="answer"]:checked + label em {
 #answer01:hover + label .question,
 #answer02:hover + label .question,
 #answer03:hover + label .question {
-    color: #47b2e4; /* Specified color */
+    color: #47b2e4;
 }
