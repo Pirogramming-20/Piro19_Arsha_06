@@ -1,0 +1,70 @@
+* {
+  justify-content: space-between;
+  padding: 0 20px;
+}
+body {
+  background-color: #f3f5fa;
+}
+.services-title > h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #37517e;
+}
+.services-title > h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+.services-title > h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #47b2e4;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+#text-4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.item-box {
+  display: flex;
+}
+.item {
+  background-color: white;
+  margin-left: 24px;
+  padding: 50px 30px;
+  transition: transform 0.3s ease;
+}
+.service-name {
+  margin-top: 10px;
+  color: #37517e;
+  transition: ease-in-out 0.3s;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: grab;
+}
+.service-desc {
+  color: #444444;
+  font-size: 14px;
+}
+.item:hover {
+  transform: translateY(-10px);
+}
+.item:hover .service-name {
+  color: #47b2e4;
+}
