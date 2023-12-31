@@ -1,0 +1,88 @@
+body {
+  padding: 60px 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* 오른쪽 영역, 왼쪽 영역으로 분리 */
+.left-section {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-section {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  padding: 20px;
+  padding-left: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+#right-section-textbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+/* 제목 텍스트 */
+#title-3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #37517e;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+#text-italic {
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* progress bar */
+.skill {
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #37517e;
+}
+.val {
+  float: right;
+  font-style: normal;
+}
+.progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #e8edf5;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background-color: #37517e;
+  transform: translateX(-100%);
+  animation: slideIn 0.9s ease-out forwards;
+}
+.progress-100 .progress-fill { width: 100%; }
+.progress-90 .progress-fill { width: 90%; }
+.progress-75 .progress-fill { width: 75%; }
+.progress-55 .progress-fill { width: 55%; }
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
