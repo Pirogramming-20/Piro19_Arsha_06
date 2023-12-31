@@ -6,10 +6,49 @@
   --wide:calc(100vw - 15rem);
 }
 
+/* @keyframes adjust-progress {
+  from {
+    transform: scaleX(calc(1 / var(--num-images)));
+  }
+  to {
+    transform: scaleX(1);
+  }
+} */
+@keyframes fadein {
+  all {
+  animation-delay: view(); 
+  animation-timing-function : ease-in;
+  animation-iteration-count: 1;
+  }
+  0% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  100% {
+    opacity: 1;
+    /* transform: none; */
+  }
+  }
+  @keyframes fadein-opacity { 
+    all {
+      animation-timeline: view(); 
+      animation-timing-function : ease-in;
+      animation-iteration-count: 1;
+      animation: fadein 3s ease-in-out;}
+    0% {
+      opacity: 0;
+      /* transform: translateY(100%); */
+    }
+    100% {
+      opacity: 1;
+      /* transform: none; */
+    }
+    }
 
 part3{
-  animation-name: slidein;
-  animation-duration: 1000ms;
+  animation: linear move-background;
+  animation-duration: auto;
+  animation-timeline: scroll();
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +67,8 @@ part3{
   display: flex;
   justify-content: space-between;
   padding: 0 7.5rem;
+  animation: fadein-opacity 2s ease-in-out;
+  /* width: max(100%,1320px); */
   /* flex-wrap: wrap; */
 }
 .ctaCenterleft{
@@ -58,27 +99,14 @@ part3{
   border: 2px solid white;
   color: white;
   line-height: 50px;
+  transition: 1.5s;
+}
+.ctaCenterright:hover{
+  border: skyblue;
+  background-color: skyblue;
 }
 
-@media screen and (max-width: 1000px){
-  .ctaCenter{
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .ctaCenterleft{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: min(100%,950px);
-    align-items: center;
-  }
-} 
-  @media screen and (max-width: 775px){
-    .ctaCenter{
-      flex-direction: column;
-      align-items: center;
-    }
-}
+
 
 /* ################protfolio 구현######################## */
 
@@ -98,6 +126,7 @@ part3{
   margin-bottom: 20px;
   padding-bottom: 20px;
   color: var(--blue);
+  animation: fadein 2s linear;
 }
 
 .portfolio > h2::before{
@@ -123,10 +152,17 @@ part3{
 .pfexplain{
   text-align: center;
   font-size: 1.6rem;
+  animation: fadein 2s linear;
+}
+.pfexample> .pfcheckbox{
+  display: none;
+  width: 100%;
+  height: 100%;
 }
 .pfexample{
   display: flex;
   gap:10px;
+  animation: fadein 2s linear;
 }
 .pfitem{
   background-color: white;
@@ -134,9 +170,14 @@ part3{
   font-size: 15px;
   padding: 8px 20px;
 }
-.pfexample > div:nth-of-type(1){
+.pfexample > label:nth-of-type(1){
   background-color: skyblue;
   color: white;
+}
+
+.pfitem:hover {
+  background-color: skyblue;
+  color: white;  
 }
 
 /* ##########호버 구현할것############ */
@@ -147,6 +188,7 @@ part3{
   gap:var(--gap);
   padding-bottom: 3.5rem;
   width: var(--wide);
+  animation: fadein 2s linear;
 }
 .pic{
   width: 100%;
@@ -159,11 +201,14 @@ part3{
 
 
 /* #########################TEAM구현########################### */
+
 .teambackground{
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f3f5fa;
+  width: 100%;
+
 }
 
 .team{
@@ -182,6 +227,7 @@ part3{
   margin-bottom: 20px;
   padding-bottom: 20px;
   color: var(--blue);
+  animation: fadein 2s linear;
 }
 
 .team > h2::before{
@@ -207,22 +253,30 @@ part3{
 .teamexplain{
   text-align: center;
   font-size: 1.6rem;
+  animation: fadein 2s linear;
 }
 
 .teamgrid{
   display:grid;
   gap:var(--gap);
   grid-template-columns: repeat(2,1fr);
+  width: 100%;
 }
 .teamcard{
   background-color: white;
   display: flex;
   padding:var(--gap);
   gap:var(--gap);
+  animation: fadein 2s ease-in-out;
+  transition : 0.3s;
+  position:relative;
+}
+.teamcard:hover{
+  transform: translateY(-10px);
 }
 .teamcardimg{
+  width: min(100%,180px);
   border-radius: 50%;
-  width: 110px;
 }
 .teamname{
   font-size: 20px;
@@ -250,4 +304,67 @@ part3{
 .teamcardexplain{
   margin-top: 10px;
   font-size: 14px;
+}
+.teamcardright{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+.teamplatform{
+  display: flex;
+  gap:13px;
+}
+
+.teamplaticon{
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 32px;
+  height: 32px;
+  background: #eff2f8;
+  flex-direction: row;
+}
+.team-icon {
+  width: 33px;
+  height: 33px;
+  background-color: #eff2f8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-icon-in {
+  width: 60%;
+  fill: var(--blue);
+}
+.team-icon:hover{
+  background-color: #1DA1F2;
+  > .team-icon-in{
+    fill: white;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .ctaCenter{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .ctaCenterleft{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: min(100%,950px);
+    align-items: center;
+  }
+  .teamgrid{
+    grid-template-columns: repeat(1,1fr);
+  } 
+  @media screen and (max-width: 775px){
+    .ctaCenter{
+      flex-direction: column;
+      align-items: center;
+    }
+}
 }
