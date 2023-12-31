@@ -6,11 +6,24 @@
   --wide:calc(100vw - 15rem);
 }
 
+@keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+
 .aaa{
   background-color: white;
   height: 1500px;
 }
 part3{
+  animation-name: slidein;
+  animation-duration: 1000ms;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +48,7 @@ part3{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  
+  width: min(100%,950px);
 }
 .ctaCenterleftup{
   color: white;
@@ -59,6 +72,26 @@ part3{
   border: 2px solid white;
   color: white;
   line-height: 50px;
+}
+
+@media screen and (max-width: 1000px){
+  .ctaCenter{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .ctaCenterleft{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: min(100%,950px);
+    align-items: center;
+  }
+} 
+  @media screen and (max-width: 775px){
+    .ctaCenter{
+      flex-direction: column;
+      align-items: center;
+    }
 }
 
 /* ################protfolio 구현######################## */
