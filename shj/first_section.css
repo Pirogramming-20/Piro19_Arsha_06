@@ -1,0 +1,85 @@
+#first{
+    background-color: #37517E;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 70px 0 60px;
+}
+#first-container{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+#title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    color: white;
+    gap: 20px;
+}
+#title-container-rayout{
+
+}
+#title-container h1{
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#title-container h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: #AFB9CB;
+    margin-bottom: 50px;
+}
+#first-container img{
+    width: 48%;
+    object-fit: cover;
+    animation: up-down 4s ease-in-out infinite alternate-reverse both;
+    margin: 0 12px;
+}
+@keyframes up-down{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(25px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+#button-container{
+    display: flex;
+}
+#button-container > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0 25px;
+    font-size: 16px;
+}
+#button-container > div:hover i{
+    color: #47b2e4;
+}
+#button-container i{
+    font-size: 32px;
+    margin-right: 8px;
+    transition: all 0.18s ease-in;
+}
+#button-container a{
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 11px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px 0 0 0;
+    color: #fff;
+    background: #47b2e4;
+}
+#button-container a:hover{
+    background-color: rgba(71, 178, 228, 0.7);
+}

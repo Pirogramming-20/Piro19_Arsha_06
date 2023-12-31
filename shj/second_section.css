@@ -1,0 +1,29 @@
+#second{
+    display: flex;
+    justify-content: center;
+    background-color: #F3F5FA;
+    padding: 12px;
+}
+#second-box{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+.second-item{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 0 12px;
+    text-align: center;
+}
+.second-item img{
+    max-width: 45%;
+    transition: all 0.4s ease-in-out;
+    display: inline-block;
+    padding: 15px 0;
+    filter: grayscale(100);
+}
+.second-item img:hover{
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
