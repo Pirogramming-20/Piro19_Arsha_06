@@ -292,7 +292,9 @@ price{
 .fa-solid fa-question, .fa-solid fa-chevron-down toggle-icon{
     align-items: center;
 }
-
+.radio_checked:checked > .toggle-icon{
+    transform: rotate(180deg);
+}
 
 /* -------------------------------------------------------contact -----------------------------------------*/
 
