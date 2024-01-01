@@ -14,6 +14,7 @@
   margin-top: 110px;
   box-sizing: border-box;
   animation: slideUpAnimation 1s ease-out;
+  animation-timeline: view();
 }
 .whyUs-right-section {
   float: left;
@@ -102,6 +103,7 @@ input[id*="answer"]:checked + label em {
 
 .whyUs-animate-image {
   animation: scaleAnimation 1s ease-in-out;
+  animation-timeline: view();
 }
 
 @keyframes scaleAnimation {
