@@ -3,6 +3,7 @@ section{
     padding: 60px 0;
 }
 
+
 .section_title4 > h2{
     
     position:relative;
@@ -31,7 +32,7 @@ section{
 }
   
 .pricing4{
-    
+    background-color: #FFFFFF;
     padding:60px 0;
 }
 
@@ -206,13 +207,7 @@ price{
     background: #23a3df;
 }
   
-/* 초록체크
-    .bx-check{
-    color: #28a745;
-    font-size: 24px;
-    box4-sizing: border-box4;
-    
-} */
+
 
 
 
@@ -233,11 +228,13 @@ li i.fa-question {
     margin-right: auto;
 }
 
-li a {
-    flex-grow: 1; 
-   
-}
 
+li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+}
 
 
 
@@ -254,6 +251,12 @@ li a {
     position: relative;
     align-items: center;
 } 
+
+.list4 li:hover{
+    color:#47b2e4;
+    cursor: pointer;
+
+}
 
 .list4 {
     padding: 0 100px;
@@ -284,25 +287,37 @@ li a {
     margin-bottom: 0;
     padding: 10px 0 0 0;
 }
- 
+
+.fa-solid fa-chevron-down {
+    position:absolute;
+    right:100px;
+}
+
+
 /* -------------------------------------------------------contact -----------------------------------------*/
 
 .contact4{
     padding:60px 0;
+    background-color: #FFFFFF;
 }
 
-.contact4 .left4{
+.left4{
   border-top: 3px solid #47b2e4;
   border-bottom: 3px solid #47b2e4;
   padding: 30px;
   background: #fff;
-  width: 30%;
+  width: 35%;
   position: relative;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
 }
-.left4{
-    padding:0 12px;
+
+.left4 .loction4 i:hover,
+.left4 .email4 i:hover,
+.left4 .phone4 i:hover {
+    background: #37517e;
+    cursor: pointer;
 }
+
 .contact4 .left4 i{
   font-size: 20px;
   color: #47b2e4;
@@ -332,13 +347,10 @@ li a {
     color: #6182ba;
 }
 
-.left4 .map4 img{
-    width: 227.92px;
-    height: 197.92px;
-}
+
 
 .right4{
-  width: 100%;
+  width: 50%;
   border-top: 3px solid #47b2e4;
   border-bottom: 3px solid #47b2e4;
   padding: 30px;
@@ -353,11 +365,17 @@ li a {
     color: #fff;
     transition: 0.4s;
     border-radius: 50px;
+    font-size: 16px;
+  
 }
 
-.contact4 button ::hover{
+.contact4 button:hover{
     background: #209dd8;
+    cursor: pointer;
+    
 }
+
+
 .whole4{
     display: flex;
     gap : 20px;
@@ -600,4 +618,24 @@ footer .credits {
 strong{
     font-weight:bolder;
 }
+.footer-links p{
+    padding-bottom: 30px;
+}
    
+.team-icon4 {
+    width: 33px;
+    height: 33px;
+    background-color:#23a3df;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .team-icon-in4 {
+    width: 60%;
+    fill: white;
+  }
+  .team-icon4:hover{
+    background:#37517e;
+    cursor: pointer;
+}

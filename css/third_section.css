@@ -71,6 +71,9 @@
     line-height: 1.5;
     margin-bottom: 1rem;
 }
+#about-left-content li{
+    justify-content: initial;
+}
 #about-left-content li:nth-of-type(2), #about-left-content li:nth-of-type(3){
     margin-top: 16px;
 }
