@@ -193,7 +193,6 @@ part3{
 }
 .picback{
   position: relative;
-  z-index: 3;
 }
 .piccontent{
   opacity: 0;
