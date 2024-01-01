@@ -60,7 +60,7 @@ part3{
   justify-content: space-between;
   padding: 0 7.5rem;
   animation: fadein 2s ease-in-out;
-  animation-timeline: view(0,- infinite);
+  animation-timeline: view();
   /* width: max(100%,1320px); */
   /* flex-wrap: wrap; */
 }
@@ -182,7 +182,8 @@ part3{
   gap:var(--gap);
   padding-bottom: 3.5rem;
   width: var(--wide);
-  animation: fadein 2s linear;
+  animation: fadein 0.3s;
+  /* transition: 0.3s; */
   order:1;
   display: none;
   /* flex-wrap: wrap; */
@@ -231,7 +232,6 @@ part3{
   gap:var(--gap);
   padding-bottom: 3.5rem;
   width: var(--wide);
-  animation: fadein 2s linear;
 }
 
 /* #########################TEAM구현########################### */
@@ -262,7 +262,6 @@ part3{
   padding-bottom: 20px;
   color: var(--blue);
   animation: fadein ease-in-out;
-  animation-timeline: view();
 }
 
 .team > h2::before{
@@ -289,7 +288,6 @@ part3{
   text-align: center;
   font-size: 1.6rem;
   animation: fadein 2s ease-in-out;
-  animation-timeline: view();
 }
 
 .teamgrid{
@@ -303,8 +301,7 @@ part3{
   display: flex;
   padding:var(--gap);
   gap:var(--gap);
-  animation: fadein  ease-in-out;
-  animation-timeline: view();
+  animation: fadein 2s ease-in-out;
   animation-iteration-count: 1;
 
   
