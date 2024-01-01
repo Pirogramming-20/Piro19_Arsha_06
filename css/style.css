@@ -219,14 +219,32 @@ price{
     padding: 60px 0px;
 
 }
+.frequently_inline{
+    display: flex;
+    position:relative;
+    margin-bottom: 10px;
+}
+
+.frequently_inline i:hover,
+.frequently_inline a:hover{
+    color: #47B2E4;
+}
 
 .bigbox4{
     display: flex;
     flex-direction: column;
 }
 
-.radio_checked:checked + label + .explanation4{
-    display: inline;  /*이것저것 넣어보면서 알맞은값 찾기*/
+.radio_checked:checked+label>.toggle-icon{
+    transform: rotate(180deg);
+    color: #47B2E4;
+}
+.radio_checked:checked+label>a{
+    color: #47B2E4;
+}
+.radio_checked:checked+label+.explanation4{
+    display: inline;
+    /*이것저것 넣어보면서 알맞은값 찾기*/
 }
 
 .frequently_asked4{
@@ -235,6 +253,7 @@ price{
   border-radius: 4px;
   position: relative;
   margin-top: 15px;
+
   
 }
 
@@ -251,10 +270,11 @@ price{
     cursor: pointer;
 
 }
-
-.list4 {
-    padding: 0 100px;
+.toggle-icon{
+    position: absolute;
+    right: 0;
 }
+
 
 .list4 ul {
     padding: 0;
@@ -266,12 +286,13 @@ price{
     display: block;
     position: relative;
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 24px;
-    font-weight: 500;
+    font-weight: 650;
     padding: 0 30px;
     outline: none;
     cursor: pointer;
+    color:#38517E;
 }
 
 .list4 p {
