@@ -219,14 +219,25 @@ price{
     padding: 60px 0px;
 
 }
-
+.frequently_inline{
+    display: flex;
+    position:relative;
+}
 .bigbox4{
     display: flex;
     flex-direction: column;
 }
 
-.radio_checked:checked + label + .explanation4{
-    display: inline;  /*이것저것 넣어보면서 알맞은값 찾기*/
+.radio_checked:checked+label>.toggle-icon{
+    transform: rotate(180deg);
+    color: #47B2E4;
+}
+.radio_checked:checked+label>a{
+    color: #47B2E4;
+}
+.radio_checked:checked+label+.explanation4{
+    display: inline;
+    /*이것저것 넣어보면서 알맞은값 찾기*/
 }
 
 .frequently_asked4{
@@ -251,10 +262,11 @@ price{
     cursor: pointer;
 
 }
-
-.list4 {
-    padding: 0 100px;
+.toggle-icon{
+    position: absolute;
+    right: 0;
 }
+
 
 .list4 ul {
     padding: 0;
