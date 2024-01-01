@@ -214,45 +214,39 @@ price{
 
 /* ----------------------------------------------------frequently asked ----------------------------------------*/
 
-li .fa-solid fa-question{
-    align-items: center;
-}
-
-li {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-}
-
-li i.fa-question {
-    margin-right: auto;
-}
-
-
-li a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%; 
-}
-
-
-
 .frequently4{
     background-color: #f3f5fa;
     padding: 60px 0px;
 
 }
 
-.list4 li{
-    padding: 20px;
-    background: #fff;
-    border-radius: 4px;
-    position: relative;
-    align-items: center;
-} 
+.bigbox4{
+    display: flex;
+    flex-direction: column;
+}
 
-.list4 li:hover{
+.radio_checked:checked + label + .explanation4{
+    display: inline;  /*이것저것 넣어보면서 알맞은값 찾기*/
+}
+
+.frequently_asked4{
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  margin-top: 15px;
+  
+}
+
+.frequently_asked4 .explanation4{
+   display:none;
+}
+
+.radio_checked{
+    display: none;
+}
+
+.list4 label:hover{
     color:#47b2e4;
     cursor: pointer;
 
@@ -267,9 +261,6 @@ li a {
     list-style: none;
 }
   
-.list4 li+li {
-    margin-top: 15px;
-}
   
 .list4 a {
     display: block;
@@ -291,6 +282,15 @@ li a {
 .fa-solid fa-chevron-down {
     position:absolute;
     right:100px;
+}
+
+.frequently_asked4 label{
+    display: flex;
+    
+}
+
+.fa-solid fa-question, .fa-solid fa-chevron-down toggle-icon{
+    align-items: center;
 }
 
 
