@@ -194,6 +194,7 @@ part3{
 .picback{
   position: relative;
   overflow: hidden;
+
 }
 .piccontent{
   opacity: 0;
