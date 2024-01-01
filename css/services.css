@@ -95,3 +95,10 @@ body {
 .item:hover .service-name {
   color: #47b2e4;
 }
+
+/* 서비스 아이콘 svg처리하기 위한 css */
+.service-icon{
+  fill: #47b2e4;
+  height: 35px;
+  width: 35px;
+}
