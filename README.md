@@ -44,20 +44,20 @@
 
 ### 각 섹션 별 특징
 
-1. "why us" 화면
+** 1. "why us" 화면**
 
 - 화면을 left-section과 right-section으로 나누어 left-section에는 글자가, right-section에는 그림이 오도록 배치
 - left-section의 question 부분은 checkbox 속성을 이용하여 클릭될 때마다 속성이 check가 되도록 하여 밑에 텍스트 부분이 나타나도록 함.
 - 또한, radio 속성을 이용하여 사용자가 한 번에 하나의 question-answer만 볼 수 있도록 함
 - 페이지를 새로고침할 때마다 페이지에 있는 요소들이 작은 크기에서 시작했다가 원래 크기로 커지는 애니메이션을 주었음
 
-2. "skills" 화면
+** 2. "skills" 화면**
 
 - 화면을 left-section과 right-section으로 나누어 left-section에는 그림이, right-section에는 글자가 오도록 배치
 - 진행바가 채워지는 부분은 #e8edf5색 영역이 0.9초에 걸쳐 #37517e색 영역으로 바뀌는 애니메이션을 줌으로써 구현
 - 페이지를 새로고침할 때마다 right-section에 있는 그림은 왼쪽 아래에서 원래 위치로 날아오고, left-section에 있는 그림은 오른쪽 아래에서 원래 위치로 날아오는 애니메이션을 주었음
 
-3. "services" 화면
+** 3. "services" 화면 **
 
 - 화면 상단의 제목과 글자 부분은 "services-title" 영역으로, 화면 하단의 box 부분은 "item-box" 영역으로 나눔
 - 각 박스에 마우스를 호버하면 박스가 10px만큼 위로 올라감
