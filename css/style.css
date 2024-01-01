@@ -380,7 +380,6 @@ price{
     display: flex;
     gap : 20px;
 }
-
 .right4 .first-line4{
     display: flex;  
 
@@ -619,7 +618,6 @@ footer .credits {
 strong{
     font-weight:bolder;
 }
-
 .footer-links p{
     padding-bottom: 30px;
 }

@@ -40,10 +40,7 @@
     }
     }
 
-part3{
-  animation: linear move-background;
-  animation-duration: auto;
-  animation-timeline: scroll();
+part3{ 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +59,8 @@ part3{
   display: flex;
   justify-content: space-between;
   padding: 0 7.5rem;
-  animation: fadein-opacity 2s ease-in-out;
+  animation: fadein 2s ease-in-out;
+  animation-timeline: view(0,- infinite);
   /* width: max(100%,1320px); */
   /* flex-wrap: wrap; */
 }
@@ -149,26 +147,27 @@ part3{
   font-size: 1.6rem;
   animation: fadein 2s linear;
 }
-.pfexample> .pfcheckbox{
+.pfcheckbox{
   display: none;
-  width: 100%;
-  height: 100%;
 }
 .pfexample{
   display: flex;
-  gap:10px;
+  gap:14px;
+  justify-content: center;
   animation: fadein 2s linear;
+  flex-wrap: wrap;
 }
 .pfitem{
   background-color: white;
   border-radius: 15px;
   font-size: 15px;
   padding: 8px 20px;
+  cursor: pointer;
 }
-.pfexample > label:nth-of-type(1){
+/* .pfexample > label:nth-of-type(1){
   background-color: skyblue;
   color: white;
-}
+} */
 
 .pfitem:hover {
   background-color: skyblue;
@@ -179,43 +178,61 @@ part3{
 /* ##########클릭시 구현할것############# */
 
 .product{
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:var(--gap);
+  padding-bottom: 3.5rem;
+  width: var(--wide);
+  animation: fadein 2s linear;
+  order:1;
+  display: none;
+  /* flex-wrap: wrap; */
+}
+.pic{
+  width: 100%;
+  transition: 0.5s linear;
+}
+.picback{
+  position: relative;
+  overflow: hidden;
+
+}
+.piccontent{
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s;
+  background: rgba(55, 81, 126, 0.8);
+  padding: 10px 15px;
+  transition: 0.5s linear;
+}
+.productline{
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+.picback:hover {
+  > .piccontent{
+    opacity: 1;
+}
+  > .pic{
+    transform: scale(1.2);
+  }
+}
+
+.pfcheckbox:checked+.pfitem{
+  background-color: skyblue;
+  color: white;
+}
+.pfcheckbox:checked+.pfitem+.product{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap:var(--gap);
   padding-bottom: 3.5rem;
   width: var(--wide);
   animation: fadein 2s linear;
-  /* flex-wrap: wrap; */
 }
-.pic{
-  width: 100%;
-  padding-bottom: var(--gap);
-}
-.picback{
-  position: relative;
-  z-index: 3;
-}
-.piccontent{
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  bottom: 26px;
-  z-index: 3;
-  right: 0;
-  transition: all 0.3s;
-  background: rgba(55, 81, 126, 0.8);
-  padding: 10px 15px;
-}
-.productline{
-  display: flex;
-  flex-direction: column;
-}
-.picback:hover > .piccontent{
-  opacity: 1;
-  z-index: 2;
-}
-
-
 
 /* #########################TEAM구현########################### */
 
@@ -244,8 +261,8 @@ part3{
   margin-bottom: 20px;
   padding-bottom: 20px;
   color: var(--blue);
-  animation: fadein linear;
-  animation-timeline: view();
+  animation: fadein 2s ease-in-out;
+  animation-timeline: view(0,- infinite);
 }
 
 .team > h2::before{
@@ -271,7 +288,8 @@ part3{
 .teamexplain{
   text-align: center;
   font-size: 1.6rem;
-  animation: fadein 2s linear;
+  animation: fadein 2s ease-in-out;
+  animation-timeline: view(10px,10px);
 }
 
 .teamgrid{
@@ -285,8 +303,13 @@ part3{
   display: flex;
   padding:var(--gap);
   gap:var(--gap);
-  animation: fadein 2s ease-in-out;
-  transition : 0.3s;
+  animation: fadein  ease-in-out;
+  animation-timeline: view();
+  animation-iteration-count: 1;
+
+  
+  /* animation-range: normal; */
+  /* transition : 0.3s; */
   position:relative;
 }
 .teamcard:hover{
@@ -357,6 +380,8 @@ part3{
   width: 60%;
   fill: var(--blue);
 }
+
+
 .team-icon:hover{
   background-color: #1DA1F2;
   > .team-icon-in{
@@ -376,7 +401,7 @@ part3{
     width: min(100%,950px);
     align-items: center;
   }
-  .product{
+  .pfcheckbox:checked+.pfitem+.product{
     grid-template-columns: repeat(2,1fr);
   }
   .teamgrid{
@@ -387,8 +412,9 @@ part3{
       flex-direction: column;
       align-items: center;
     }
-    .product{
+    .pfcheckbox:checked+.pfitem+.product{
       grid-template-columns: repeat(1,1fr);
     }
+} 
 }
-}
+
